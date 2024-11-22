@@ -11,9 +11,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (senhaHash === senhaCorreta) {
             localStorage.setItem('autorizado', 'true');
-            window.location.href = 'index.html';
+            window.location.href = 'main.html';
         } else {
             document.getElementById('erro-msg').textContent = 'Senha incorreta!';
         }
     });
-}); 
+});

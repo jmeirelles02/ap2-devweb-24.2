@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     if (!localStorage.getItem('autorizado')) {
-        window.location.href = 'login.html';
+        window.location.href = 'index.html';
         return;
     }
 
@@ -61,4 +61,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Carregar todos os atletas inicialmente
     buscarAtletas();
-}); 
+});
+
+function logout() {
+    // Limpar qualquer dado de sessão se necessário
+    localStorage.removeItem('user'); // ou sessionStorage.removeItem('user')
+
+    // Redirecionar para a página de login
+    window.location.href = 'index.html';
+}

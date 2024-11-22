@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', async () => {
     if (!localStorage.getItem('autorizado')) {
-        window.location.href = 'login.html';
+        window.location.href = 'index.html';
         return;
     }
 
@@ -35,4 +35,4 @@ document.addEventListener('DOMContentLoaded', async () => {
     } catch (error) {
         detalhesContainer.innerHTML = '<p class="erro">Erro ao carregar os dados do atleta.</p>';
     }
-}); 
+});
