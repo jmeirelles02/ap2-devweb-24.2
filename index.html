@@ -3,32 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Elenco Botafogo</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>Login</title>
+    <link rel="stylesheet" href="css/login.css">
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    <script src="js/sha256.js"></script>
+    <script src="js/login.js"></script>
 </head>
 <body>
-    <header>
-        <h1>Elenco Botafogo 2024</h1>
-        <div class="controles">
-            <div class="filtro-container">
-                <input type="text" id="filtro" placeholder="Filtrar atletas...">
+    <main class="login-container">
+        <h1>Login</h1>
+        <form id="login-form">
+            <div class="senha-demo">
+                Senha para teste: botafogo2024
             </div>
-            <div class="elenco-buttons">
-                <button data-elenco="all" class="active">Todos</button>
-                <button data-elenco="masculino">Masculino</button>
-                <button data-elenco="feminino">Feminino</button>
-            </div>
-            <select id="elenco-select">
-                <option value="all">Todos</option>
-                <option value="masculino">Masculino</option>
-                <option value="feminino">Feminino</option>
-            </select>
-        </div>
-    </header>
-    <main>
-        <div id="atletas-container"></div>
+            <input type="password" id="senha" placeholder="Digite a senha" required>
+            <button type="submit">Entrar</button>
+        </form>
+        <div id="erro-msg" class="erro"></div>
     </main>
-    <script src="js/main.js"></script>
 </body>
 </html>
